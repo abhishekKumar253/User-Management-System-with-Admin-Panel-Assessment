@@ -10,7 +10,7 @@ import {
 const router = express.Router();
 
 router.get("/get", protectRoute, getNotifications);
-router.get("/sent", protectRoute, getAllSentNotifications);
+router.get("/sent", protectRoute, adminRoute, getAllSentNotifications);
 router.post("/send", protectRoute, sendNotification);
 router.put("/mark-delivered/:notificationId", protectRoute, markAsDelivered);
 
